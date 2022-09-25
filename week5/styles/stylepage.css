@@ -1,0 +1,72 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: brown;
+  }
+  .menutext {
+    color: aliceblue;
+    text-decoration: none;
+  }
+  .menutext:hover {
+    text-decoration: underline;
+  }
+  .main{
+    display: flex;
+    background-color: bisque;
+  }
+  .recipe {
+    display: flex;
+  }
+  .casserole {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 60.5%;
+  }
+  .suppers {
+    text-decoration: none;
+    color: darkred;
+  }
+  .suppers:hover {
+    text-decoration: underline;
+  }
+  .ingredients {
+    width: 50%;
+    padding: 5px;
+  }
+  .easy {
+    width: 50%;
+    padding: 5px;
+    margin-left: 55px;
+  }
+  .collections{
+    background-color: bisque;
+  }
+  .one-pot{
+    text-decoration: none;
+    color: darkred;
+  }
+  .one-pot:hover{
+    text-decoration: underline;
+  }
+  .directions{
+    width: 30%;
+    margin-left: 150px;
+  }
+  section{
+    width:50%
+  }
+  .footer{
+    display: flex;
+    background-color: brown;
+    color: aliceblue;
+    justify-content: space-around;
+  }
+  .bottommenu{
+    text-decoration: none;
+    color: aliceblue;
+  }
+  .bottommenu:hover{
+    text-decoration: underline;
+  }
