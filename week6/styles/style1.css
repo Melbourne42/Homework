@@ -1,0 +1,57 @@
+.container {
+    display: grid;
+    height: 90vh;
+    gap: 1rem;
+    grid-template-areas:
+      "header header header header"
+      "main-cell main-cell sidebar sidebar"
+      "cell-1 cell-2 sidebar sidebar"
+      "cell-3 cell-3 sidebar sidebar"
+      "cell-4 cell-5 cell-6 cell-7";
+  }
+  .header {
+    border: 1px solid black;
+    grid-area: header;
+    background-color: lightgray;
+  }
+  .sidebar {
+    border: 1px solid black;
+    grid-area: sidebar;
+    background-color: lightgreen;
+  }
+  .main-cell {
+    border: 1px solid black;
+    grid-area: main-cell;
+    background-color: yellow;
+  }
+  .cell-1 {
+    border: 1px solid black;
+    grid-area: cell-1;
+    background-color: yellow;
+  }
+  .cell-2 {
+    border: 1px solid black;
+    grid-area: cell-2;
+    background-color: yellow;
+  }
+  .cell-3 {
+    border: 1px solid black;
+    grid-area: cell-3;
+    background-color: yellow;
+  }
+  .cell-4 {
+    border: 1px solid black;
+    grid-area: cell-4;
+  }
+  .cell-5 {
+    border: 1px solid black;
+    grid-area: cell-5;
+  }
+  .cell-6 {
+    border: 1px solid black;
+    grid-area: cell-6;
+  }
+  .cell-7 {
+    border: 1px solid black;
+    grid-area: cell-7;
+  }

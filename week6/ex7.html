@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 25% 25% 25% 25%;
+      height: 90vh;
+      gap: 15px;
+      grid-template-areas:
+        "header header header header"
+        "main main top-text top-text"
+        "bottom-text bottom-text bottom-text bottom-text"
+        "bottom-text-2 bottom-text-2 bottom-text-3 bottom-text-3"
+        "footer footer footer footer";
+    }
+    .header {
+      background-color: aqua;
+      grid-area: header;
+    }
+    .main {
+      background-color: brown;
+      grid-area: main;
+    }
+    .top-text {
+      background-color: darkgoldenrod;
+      grid-area: top-text;
+    }
+    .bottom-text-1 {
+      background-color: cadetblue;
+      grid-area: bottom-text;
+    }
+    .bottom-text-2 {
+      background-color: darkslateblue;
+      grid-area: bottom-text-2;
+    }
+    .bottom-text-3 {
+      background-color: khaki;
+      grid-area: bottom-text-3;
+    }
+    .footer {
+      background-color: crimson;
+      grid-area: footer;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <header class="header">header</header>
+      <main class="main">Текст</main>
+      <section class="top-text">Текст 1</section>
+      <div class="bottom-text-1">Текст 3</div>
+      <div class="bottom-text-2">Текст 3</div>
+      <div class="bottom-text-3">Текст 3</div>
+      <footer class="footer">Контакты</footer>
+    </div>
+  </body>
+</html>
