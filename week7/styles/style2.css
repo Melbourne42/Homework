@@ -1,0 +1,104 @@
+.container {
+    display: grid;
+    height: 90vh;
+    gap: 1rem;
+    grid-template-areas:
+      "header header header header"
+      "main-cell main-cell sidebar sidebar"
+      "cell-1 cell-2 sidebar sidebar"
+      "cell-3 cell-3 sidebar sidebar"
+      "footer footer footer footer";
+  }
+  @media screen and (max-width: 767px) {
+    .container {
+      display: grid;
+      height: 90vh;
+      gap: 1rem;
+      grid-template-areas:
+        "header header header header"
+        "main-cell main-cell main-cell main-cell"
+        "cell-1 cell-1 cell-1 cell-1"
+        "cell-2 cell-2 cell-2 cell-2"
+        "cell-3 cell-3 cell-3 cell-3"
+        "sidebar sidebar sidebar sidebar"
+        "footer footer footer footer";
+    }
+    .footer {
+      grid-area: footer;
+      display: grid;
+      gap: 1rem;
+      grid-template-areas:
+        "cell-4 cell-4 cell-4 cell-4"
+        "cell-5 cell-5 cell-5 cell-5"
+        "cell-6 cell-6 cell-6 cell-6"
+        "cell-7 cell-7 cell-7 cell-7";
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      display: grid;
+      height: 90vh;
+      gap: 1rem;
+      grid-template-areas:
+        "header header header header"
+        "main-cell main-cell sidebar sidebar"
+        "cell-1 cell-1 sidebar sidebar"
+        "cell-2 cell-2 sidebar sidebar"
+        "cell-3 cell-3 sidebar sidebar"
+        "footer footer footer footer";
+    }
+    .footer {
+      grid-area: footer;
+      display: grid;
+      gap: 1rem;
+      grid-template-areas:
+        "cell-4 cell-4 cell-5 cell-5"
+        "cell-6 cell-6 cell-7 cell-7";
+    }
+  }
+  .header, .main-cell, .cell-1, .cell-2, .cell-3, .cell-4, .cell-5, .cell-6, .cell-7, .sidebar{
+    border: 1px solid black;
+  }
+  .header {
+    grid-area: header;
+    background-color: lightgray;
+  }
+  .sidebar {
+    grid-area: sidebar;
+    background-color: lightgreen;
+  }
+  .main-cell {
+    grid-area: main-cell;
+    background-color: yellow;
+  }
+  .cell-1 {
+    grid-area: cell-1;
+    background-color: yellow;
+  }
+  .cell-2 {
+    grid-area: cell-2;
+    background-color: yellow;
+  }
+  .cell-3 {
+    grid-area: cell-3;
+    background-color: yellow;
+  }
+  .footer{
+    grid-area: footer;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+    "cell-4 cell-5 cell-6 cell-7";
+  }
+  .cell-4 {
+    grid-area: cell-4;
+  }
+  .cell-5 {
+    grid-area: cell-5;
+  }
+  .cell-6 {
+    grid-area: cell-6;
+  }
+  .cell-7 {
+    grid-area: cell-7;
+  }
