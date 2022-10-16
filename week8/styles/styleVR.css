@@ -1,0 +1,70 @@
+body,
+.main__button,
+.main__button_buy {
+  font-family: Roboto Condensed;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.main__name {
+  line-height: 120%;
+  font-size: 45px;
+  line-height: 120%;
+  margin-right: 550px;
+}
+.main__button {
+  background-color: #5222d0;
+  color: white;
+  border-radius: 12px;
+  width: 115px;
+  height: 38px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+}
+.main__text_h1 {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 120%;
+  margin-left: 300px;
+}
+.main_article {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+  margin-left: 300px;
+  padding: 15px;
+}
+.main__button_buy {
+  width: 270px;
+  height: 84px;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 35px;
+  margin-left: 300px;
+  background-color: #5222d0;
+  color: white;
+  border-radius: 12px;
+}
+.main__pic {
+  float: right;
+  margin-right: 380px;
+}
+.footer__nav {
+  display: inline-flex;
+  margin-top: 290px;
+  margin-left: 200px;
+  margin-right: 250px;
+  justify-content: space-around;
+  width: 500px;
+  height: 90px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+}
+.footer__nav_href{
+    text-decoration: none;
+    color: black;
+}
