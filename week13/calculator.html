@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="plus ()">+</button>
+    <button onclick="minus ()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide ()">/</button>
+    <script>
+      function plus() {
+        let num1 = prompt("Какое число хотите ввести?");
+        let num2 = prompt("Какое число хотите ввести?");
+        alert(+num1 + +num2);
+      }
+      function minus() {
+        let num1 = prompt("Какое число хотите ввести?");
+        let num2 = prompt("Какое число хотите ввести?");
+        alert(+num1 - +num2);
+      }
+      function multiply() {
+        let num1 = prompt("Какое число хотите ввести?");
+        let num2 = prompt("Какое число хотите ввести?");
+        alert(+num1 * +num2);
+      }
+      function divide() {
+        let num1 = prompt("Какое число хотите ввести?");
+        let num2 = prompt("Какое число хотите ввести?");
+        alert(+num1 / num2);
+      }
+    </script>
+  </body>
+</html>
