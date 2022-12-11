@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .pic {
+        width: 500px;
+      }
+    </style>
+    <div>
+      <img src="assets/cat2.jpg" id="galleryImg" class="pic" />
+      <br /><button onclick="changePic ()">Переключить картинку</button>
+    </div>
+    <script>
+      function changePic() {
+        let newImg = document.getElementById("galleryImg");
+        newImg.src = "assets/cat1.jpg";
+      }
+    </script>
+  </body>
+</html>
