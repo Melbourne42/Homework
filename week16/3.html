@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>Hi</div>
+    <script>
+      const js = ["js", "css", "html"];
+      alert(js[0]);
+
+      const value = [0, 1, false, 2, undefined, "", 3, null];
+      const filteredValue = value.filter(Boolean);
+      alert(filteredValue);
+
+      const arr = [
+        [1, 2],
+        [1, 2, 3],
+        [1, 2, 3, 4],
+      ];
+      const el = arr.findIndex((el) => el.length > 3);
+      alert(el);
+    </script>
+  </body>
+</html>
