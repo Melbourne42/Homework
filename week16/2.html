@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 600px;
+      width: 50vw;
+      border: 1px solid black;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .header {
+      display: flex;
+      justify-content: center;
+      border: 1px solid black;
+      width: 50vw;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <header class="header">Калькулятор стоимости авто</header>
+    <main class="container">
+      <div>
+        <label for="">Цена на аукционе, ¥</label> <input type="number" />
+      </div>
+      <div>
+        <label for="">Аукцион</label
+        ><select name="" id="">
+          <option value="352">ARAI BAYSIDE</option>
+          <option value="351">ARAI OYAMA</option>
+          <option value="346">CAA CHUBU</option>
+          <option value="345">CAA GIFU</option>
+          <option value="340">HERO</option>
+          <option value="329">JAA</option>
+          <option value="300">KAA</option>
+          <option value="364">USS KOBE</option>
+          <option value="381">ZIP OSAKA</option>
+        </select>
+      </div>
+      <div>
+        <label for="">Тип услуги</label>
+        <input type="radio" /> Целый автомобиль <input type="radio" /> Распил
+        легковой <input type="radio" /> Распил рамный
+        <input type="radio" /> Конструктор легковой
+        <input type="radio" /> Распил рамный <input type="radio" /> Конструктор
+        легковой <input type="radio" /> Конструктор джип, м/а, европ. марки
+        <input type="radio" /> запчасти на палете
+      </div>
+      <div>
+        <label for="">Тип топлива</label>
+        <input type="radio" /> Бензин (включая гибрид)
+        <input type="radio" /> Дизельное топливо
+        <input type="radio" /> Электрический
+      </div>
+      <div>
+        <label for=""> Объём двигателя, см^3</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">Мощность, л.с</label>
+        <input type="text" />
+      </div>
+      <div>
+        <label for="">Возраст автомобиля</label>
+        <input type="radio" /> Меньше 3 лет <input type="radio" /> От 5 до 7 лет
+        <input type="radio" /> Больше 7 лет
+      </div>
+      <div>
+        <label for="">Получатель</label>
+        <input type="radio" /> Физическое лицо
+        <input type="radio" /> Юридическое лицо
+      </div>
+      <div>
+        <button>Рассчитать</button>
+      </div>
+    </main>
+  </body>
+</html>
