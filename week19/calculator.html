@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #error {
+      color: red;
+    }
+  </style>
+  <body>
+    <div><input type="number" id="num1" /></div>
+    <button onclick="plus()">+</button>
+    <button onclick="minus ()">-</button>
+    <button onclick="multiply()">*</button>
+    <button onclick="divide ()">/</button>
+    <div><input type="number" id="num2" /></div>
+    <div id="error"></div>
+    <div>
+      <p>Результат</p>
+      <input type="number" id="result" readonly />
+    </div>
+    <script src="js/calculator.js"></script>
+  </body>
+</html>
