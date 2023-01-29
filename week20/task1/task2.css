@@ -1,0 +1,22 @@
+.hero {
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 22px;
+    text-align: center;
+    background-color: lightsteelblue;
+    margin: 15px;
+    width: 700px;
+    height: 730px;
+  }
+  #heroesContainer {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px solid black;
+  }
+  .img {
+    width: 550px;
+    height: 450px;
+    object-fit: contain;
+  }
