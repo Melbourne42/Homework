@@ -1,6 +1,5 @@
 const moment = require('moment');
 const Chart = require('chart.js');
-const choreographer = require('choreographer-js');
 const multiple = require('multiple.js')({
   selector: '.item',
   background: 'linear-gradient(#c5c5e4, #ffffff)'
