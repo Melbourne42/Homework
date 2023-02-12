@@ -8,12 +8,12 @@ const multiple = require('multiple.js')({
   });
 ;
 
-var speedCanvas = document.getElementById("speedChart");
+let weekCanvas = document.getElementById("weekChart");
 
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 
-var speedData = {
+let weekData = {
   labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   datasets: [{
     label: "Weekly Activity",
@@ -21,7 +21,7 @@ var speedData = {
   }]
 };
 
-var chartOptions = {
+let chartOptions = {
   legend: {
     display: true,
     position: 'top',
@@ -32,16 +32,16 @@ var chartOptions = {
   }
 };
 
-var lineChart = new Chart(speedCanvas, {
+let lineChart = new Chart(weekCanvas, {
   type: 'line',
-  data: speedData,
+  data: weekData,
   options: chartOptions
 });
-
-var densityCanvas = document.getElementById("densityChart");
+//
+let taskCanvas = document.getElementById("taskChart");
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
-var densityData = {
+var taskData = {
     label: "Tasks",
   data: [34, 32, 25, 25, 13, 25, 12]
 };
@@ -50,12 +50,12 @@ let tasksData = {
         data: [12, 30, 15, 7, 15, 18, 6],
         backgroundColor: "rgba(146, 80, 212, 1)",
 }
-var barChart = new Chart(densityCanvas, {
+let barChart = new Chart(taskCanvas, {
   type: 'bar',
   label: "Task",
   data: {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    datasets: [densityData, tasksData]
+    datasets: [taskData, tasksData]
   }
 });
 
