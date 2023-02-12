@@ -1,10 +1,10 @@
 const moment = require('moment');
 const Chart = require('chart.js');
-const choreographer = require ('choreographer-js');
+const choreographer = require('choreographer-js');
 const multiple = require('multiple.js')({
-    selector: '.item',
-    background: 'linear-gradient(#c5c5e4, #ffffff)'
-  });
+  selector: '.item',
+  background: 'linear-gradient(#c5c5e4, #ffffff)'
+});
 ;
 
 let weekCanvas = document.getElementById("weekChart");
@@ -36,18 +36,18 @@ let lineChart = new Chart(weekCanvas, {
   data: weekData,
   options: chartOptions
 });
-//
+
 let taskCanvas = document.getElementById("taskChart");
 Chart.defaults.global.defaultFontFamily = "Lato";
 Chart.defaults.global.defaultFontSize = 18;
 var taskData = {
-    label: "Tasks",
+  label: "Tasks",
   data: [34, 32, 25, 25, 13, 25, 12]
 };
 let tasksData = {
-        label: "In progress",
-        data: [12, 30, 15, 7, 15, 18, 6],
-        backgroundColor: "rgba(146, 80, 212, 1)",
+  label: "In progress",
+  data: [12, 30, 15, 7, 15, 18, 6],
+  backgroundColor: "rgba(146, 80, 212, 1)",
 }
 let barChart = new Chart(taskCanvas, {
   type: 'bar',
