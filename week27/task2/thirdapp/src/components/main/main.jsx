@@ -1,7 +1,30 @@
 import React from "react";
 import './main.scss'
 
+function EnableInput(props) {
+    return (
+        <>
+            <td><input type="text" className="input" /></td>
+            <td><input type="text" className="input" /></td>
+            <td><input type="text" className="input" /></td>
+        </>
+    )
+}
+
+function DisableInput(props) {
+    return (
+        <>
+            <td><input type="text" className="input" disabled /></td>
+            <td><input type="text" className="input" disabled /></td>
+            <td><input type="text" className="input" disabled /></td>
+        </>
+    )
+}
+
 function Main(props) {
+    let isEditing = false;
+    let changeEditing = () => isEditing = !isEditing;
+    console.log(changeEditing)
     return (
         <table border="1">
             <tbody>
@@ -12,10 +35,8 @@ function Main(props) {
                     <th></th>
                 </tr>
                 <tr>
-                    <td><input type="text" className="input" disabled /></td>
-                    <td><input type="text" disabled /></td>
-                    <td><input type="text" disabled /></td>
-                    <td className="td"><button>save</button> <button>edit</button> <button>delete</button></td>
+                    {props.isEditing ? <EnableInput /> : <DisableInput />}
+                    <td className="td"><button onClick={changeEditing}>edit</button> <button>delete</button> <button>save</button></td>
                 </tr>
             </tbody>
         </table>

@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
       <Header></Header>
-      <Main></Main>
+      <Main isEditing={true}></Main>
       <Footer></Footer>
     </div>
   );
