@@ -1,0 +1,10 @@
+.card_container {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 22px;
+    width: 25em;
+    height: 25em;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+}

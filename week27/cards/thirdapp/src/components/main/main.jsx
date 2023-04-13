@@ -1,42 +1,50 @@
 import React from "react";
 import './main.scss'
+import { useState } from "react";
 
-function EnableInput(props) {
-    return (
-        <>
-            <td><input type="text" className="input" /></td>
-            <td><input type="text" className="input" /></td>
-            <td><input type="text" className="input" /></td>
-        </>
-    )
-}
 
-function DisableInput(props) {
-    return (
-        <>
-            <td><input type="text" className="input" disabled /></td>
-            <td><input type="text" className="input" disabled /></td>
-            <td><input type="text" className="input" disabled /></td>
-        </>
-    )
-}
+function Main() {
+    const [edit, isEditing] = useState(false);
+    const editingChange = () => {
+        isEditing(!edit);
+    }
+    const Default_Props = {
+        word: 'Слово',
+        transcription: 'Транскрипция',
+        translate: 'Перевод',
+    }
+    const [info, setInformation] = useState(Default_Props);
+    function EnableInput() {
+        return (
+            <>
+                <td><input type="text" className="input" placeholder="Слово" /></td>
+                <td><input type="text" className="input" placeholder="Транскрипция" /></td>
+                <td><input type="text" className="input" placeholder="Перевод" /></td>
+            </>
+        )
+    }
 
-function Main(props) {
-    let isEditing = false;
-    let changeEditing = () => isEditing = !isEditing;
-    console.log(changeEditing)
+    function DisableInput() {
+        return (
+            <>
+                <td><input type="text" className="input" disabled placeholder="Слово" value={info.word} /></td>
+                <td><input type="text" className="input" disabled placeholder="Транскрипция" value={info.transcription} /></td>
+                <td><input type="text" className="input" disabled placeholder="Перевод" value={info.translate} /></td>
+            </>
+        )
+    }
     return (
         <table border="1">
             <tbody>
                 <tr>
                     <th>Word</th>
                     <th>Transcription</th>
-                    <th>Thanslate</th>
+                    <th>Translate</th>
                     <th></th>
                 </tr>
                 <tr>
-                    {props.isEditing ? <EnableInput /> : <DisableInput />}
-                    <td className="td"><button onClick={changeEditing}>edit</button> <button>delete</button> <button>save</button></td>
+                    {edit ? <EnableInput /> : <DisableInput />}
+                    <td className="td"><button onClick={editingChange}>edit</button> <button>cancellation</button> <button>save</button></td>
                 </tr>
             </tbody>
         </table>

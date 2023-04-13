@@ -1,11 +1,31 @@
 import React from "react"
-function card(props) {
+import { useState } from "react"
+import './card.scss'
+
+function LetTranslate() {
     return (
-        <React.Fragment>
-            <div><h2>{props.card_name}</h2></div>
-            <div>{props.transcription}</div>
-            <div><button>Проверить</button></div>
-        </React.Fragment>
+        <div><b> Кошка</b></div>
     )
 }
-export default card
+
+function DontTranslate() {
+    return
+}
+
+function Card(props) {
+    const [translate, showTranslate] = useState(false);
+    const changeCard = () => {
+        showTranslate(!translate)
+    }
+    return (
+        <>
+            <div className="card_container">
+                <div><h2>Cat{props.card_name}</h2></div>
+                <div>[Kat]{props.transcription}</div>
+                <div>{translate ? <LetTranslate /> : <DontTranslate />}</div>
+                <button onClick={changeCard}>Проверить</button>
+            </div>
+        </>
+    )
+}
+export default Card

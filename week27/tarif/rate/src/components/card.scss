@@ -1,14 +1,14 @@
 .container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     height: 500px;
 }
 
 .card-container {
     border: 1px solid black;
-    height: 500px;
+    height: 400px;
     width: 400px;
+    margin-top: 50px;
 }
 
 .name {
@@ -22,6 +22,15 @@
     text-align: center;
 }
 
-.selected:hover {
-    background-color: rgb(233, 45, 45);
+.selected {
+    background-color: rgb(201, 24, 24);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.card_button {
+    margin-top: 23px;
+    height: 40px;
+    width: 100px;
 }
