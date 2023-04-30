@@ -1,9 +1,6 @@
 import React from "react"
 import './header.scss'
 import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
     Link
 } from "react-router-dom";
 
