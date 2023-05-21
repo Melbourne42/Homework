@@ -1,0 +1,19 @@
+.study-window {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.study-button {
+    height: 2em;
+    width: 6em;
+}

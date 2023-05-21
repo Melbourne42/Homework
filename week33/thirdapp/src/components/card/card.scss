@@ -1,0 +1,18 @@
+.card-container {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 22px;
+    width: 25em;
+    height: 25em;
+    margin: 0 10px;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.card-button {
+    width: 10em;
+    text-align: center;
+    height: 2em;
+}
