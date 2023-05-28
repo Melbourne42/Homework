@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 400px;
+  width: 40vw;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.header {
+  height: 300px;
+  width: 40vw;
+  margin-top: 1em;
+}
+
+.input {
+  width: 40vw;
+}
+
+.button {
+  width: 40vw;
+}

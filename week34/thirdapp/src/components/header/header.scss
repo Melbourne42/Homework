@@ -1,0 +1,13 @@
+.menu {
+    position: fixed;
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.book-img {
+    width: 3em;
+}
