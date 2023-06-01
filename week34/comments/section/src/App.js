@@ -1,23 +1,41 @@
-import './App.css';
-import React, { useState } from 'react';
-import Comments from './Form';
-import CommentList from './List';
+import React, { useState } from "react";
+import Message from "./message";
 
-function App() {
+function Comments() {
   const [comments, setComments] = useState([]);
-  const handleAddComment = (comment) => {
-    setComments([comment, ...comments]);
+  const [newComment, setNewComment] = useState("");
+  const handleCommentsChange = (event) => {
+    setNewComment(event.target.value);
+  };
+  const handleCommentsSubmit = (event) => {
+    event.preventDefault();
+    if (newComment.trim() !== "") {
+      const comment = {
+        text: newComment,
+        isNew: true,
+      };
+      setComments((prevComments) => [comment, ...prevComments]);
+      setNewComment("");
+    }
   };
   return (
-    <div class="container">
-      <div class="header">
+    <div>
+      <h2>Комментарии </h2>
+      <form onSubmit={handleCommentsSubmit}>
+        <textarea
+          value={newComment}
+          onChange={handleCommentsChange}
+        ></textarea>
         <div>
-          <p>Hi</p>
-          <Comments onAddComment={handleAddComment} />
+          <button type="submit">Отправить комментарий</button>
         </div>
+      </form>
+      <div>
+        {comments.map((comment, index) => (
+          <Message key={index} text={comment.text} isNew={index === 0} />
+        ))}
       </div>
     </div>
   );
-}
-
-export default App;
+};
+export default Comments;
