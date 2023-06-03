@@ -12,7 +12,7 @@ function Comments() {
     if (newComment.trim() !== "") {
       const comment = {
         text: newComment,
-        isNew: true,
+        newText: true,
       };
       setComments((prevComments) => [comment, ...prevComments]);
       setNewComment("");
@@ -22,17 +22,14 @@ function Comments() {
     <div>
       <h2>Комментарии </h2>
       <form onSubmit={handleCommentsSubmit}>
-        <textarea
-          value={newComment}
-          onChange={handleCommentsChange}
-        ></textarea>
+        <textarea onChange={handleCommentsChange}></textarea>
         <div>
           <button type="submit">Отправить комментарий</button>
         </div>
       </form>
       <div>
         {comments.map((comment, index) => (
-          <Message key={index} text={comment.text} isNew={index === 0} />
+          <Message key={index} text={comment.text} newText={index === 0} />
         ))}
       </div>
     </div>
