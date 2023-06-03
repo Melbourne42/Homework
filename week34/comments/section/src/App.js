@@ -4,17 +4,17 @@ import Message from "./message";
 function Comments() {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
-  const handleCommentsChange = (event) => {
-    setNewComment(event.target.value);
+  const handleCommentsChange = (e) => {
+    setNewComment(e.target.value);
   };
-  const handleCommentsSubmit = (event) => {
-    event.preventDefault();
+  const handleCommentsSubmit = (e) => {
+    e.preventDefault();
     if (newComment.trim() !== "") {
       const comment = {
         text: newComment,
         newText: true,
       };
-      setComments((prevComments) => [comment, ...prevComments]);
+      setComments((previousComments) => [comment, ...previousComments]);
       setNewComment("");
     }
   };
@@ -29,7 +29,7 @@ function Comments() {
       </form>
       <div>
         {comments.map((comment, index) => (
-          <Message key={index} text={comment.text} newText={index === 0} />
+          <Message text={comment.text} key={index} newText={index === 0} />
         ))}
       </div>
     </div>
