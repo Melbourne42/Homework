@@ -1,23 +1,23 @@
 import Card from "../card/card"
 import './studyWindow.scss'
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 function StudyWindow({ words }) {
-    const [currentIndex, setCurrentIndex] = useState(1)
+    const [currentIndex, setCurrentIndex] = useState(0)
     const [currentCard, setCurrentCard] = useState(null)
     function setPreviousIndex() {
-        if (currentIndex !== 1) {
+        if (currentIndex !== 0) {
             setCurrentIndex(currentIndex - 1)
         }
     }
     function setNextIndex() {
-        if (currentIndex !== words.length) {
+        if (currentIndex !== words.length - 1) {
             setCurrentIndex(currentIndex + 1)
         }
     }
 
     useEffect(() => {
         if (words.length) {
-            const card = words.find((item) => item.id === currentIndex) || null;
+            const card = words[currentIndex] || null;
             setCurrentCard(card)
         }
     }, [words, currentIndex])
@@ -39,7 +39,7 @@ function StudyWindow({ words }) {
                     <p>404 not found</p>
                 </>
             )}
-            {currentIndex === words.length && (<p>Молодец!</p>)}
+            {currentIndex === words.length - 1 && (<p>Молодец!</p>)}
         </div>
     )
 }
